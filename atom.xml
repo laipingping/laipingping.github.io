@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>欢迎来到vesna的个人博客</title>
+  
+  <subtitle>欢迎来到vesna的个人博客</subtitle>
+  <link href="https://laipingping.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://laipingping.github.io/"/>
+  <updated>2023-04-03T05:46:04.693Z</updated>
+  <id>https://laipingping.github.io/</id>
+  
+  <author>
+    <name>vesna</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webpack的使用</title>
+    <link href="https://laipingping.github.io/2023/04/03/webpack-de-shi-yong/"/>
+    <id>https://laipingping.github.io/2023/04/03/webpack-de-shi-yong/</id>
+    <published>2023-04-03T05:32:55.000Z</published>
+    <updated>2023-04-03T05:46:04.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;webpack&quot;&gt;&lt;a href=&quot;#webpack&quot; class=&quot;headerlink&quot; title=&quot;webpack&quot;&gt;&lt;/a&gt;webpack&lt;/h1&gt;&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://laipingping.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="webpack" scheme="https://laipingping.github.io/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题整理-js</title>
+    <link href="https://laipingping.github.io/2023/04/03/mian-shi-ti-zheng-li-js/"/>
+    <id>https://laipingping.github.io/2023/04/03/mian-shi-ti-zheng-li-js/</id>
+    <published>2023-04-03T05:32:29.000Z</published>
+    <updated>2023-04-03T05:35:35.322Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h2&gt;&lt;h3 id=&quot;js-数据类型&quot;&gt;&lt;a href=&quot;#js-数据类型&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="八股文" scheme="https://laipingping.github.io/categories/%E5%85%AB%E8%82%A1%E6%96%87/"/>
+    
+    
+    <category term="八股文" scheme="https://laipingping.github.io/tags/%E5%85%AB%E8%82%A1%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>canvas太阳系旋转动画</title>
+    <link href="https://laipingping.github.io/2023/04/01/canvas-tai-yang-xi-xuan-zhuan-dong-hua/"/>
+    <id>https://laipingping.github.io/2023/04/01/canvas-tai-yang-xi-xuan-zhuan-dong-hua/</id>
+    <published>2023-04-01T15:16:28.000Z</published>
+    <updated>2023-04-03T05:36:01.108Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;技术说明&quot;&gt;&lt;a href=&quot;#技术说明&quot; class=&quot;headerlink&quot; title=&quot;技术说明&quot;&gt;&lt;/a&gt;技术说明&lt;/h2&gt;&lt;p&gt;Canvas提供了非常多的JavaScript绘图API（比如：绘制路径、矩形、圆、文本和图像等方法），与元素可以绘制</summary>
+        
+      
+    
+    
+    
+    <category term="案例" scheme="https://laipingping.github.io/categories/%E6%A1%88%E4%BE%8B/"/>
+    
+    
+    <category term="可视化" scheme="https://laipingping.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    <category term="canvas动画" scheme="https://laipingping.github.io/tags/canvas%E5%8A%A8%E7%94%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>纯css实现3D立体webpack Logo</title>
+    <link href="https://laipingping.github.io/2023/04/01/chun-css3-shi-xian-3d-li-ti-webpack-logo/"/>
+    <id>https://laipingping.github.io/2023/04/01/chun-css3-shi-xian-3d-li-ti-webpack-logo/</id>
+    <published>2023-04-01T08:30:49.000Z</published>
+    <updated>2023-04-02T01:01:14.169Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;技术说明&quot;&gt;&lt;a href=&quot;#技术说明&quot; class=&quot;headerlink&quot; title=&quot;技术说明&quot;&gt;&lt;/a&gt;技术说明&lt;/h2&gt;&lt;h3 id=&quot;3D动画-transform&quot;&gt;&lt;a href=&quot;#3D动画-transform&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="案例" scheme="https://laipingping.github.io/categories/%E6%A1%88%E4%BE%8B/"/>
+    
+    
+    <category term="3D动画" scheme="https://laipingping.github.io/tags/3D%E5%8A%A8%E7%94%BB/"/>
+    
+    <category term="可视化" scheme="https://laipingping.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试题整理-HTML和CSS</title>
+    <link href="https://laipingping.github.io/2023/03/20/mian-shi-ti-zheng-li-html-css/"/>
+    <id>https://laipingping.github.io/2023/03/20/mian-shi-ti-zheng-li-html-css/</id>
+    <published>2023-03-20T05:28:13.000Z</published>
+    <updated>2023-04-04T14:07:20.700Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;浏览器内核&quot;&gt;&lt;a href=&quot;#浏览器内核&quot; class=&quot;headerlink&quot; title=&quot;浏览器内核&quot;&gt;&lt;/a&gt;浏览器内核&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;IE: trident 内核&lt;br&gt;Firefox：gecko</summary>
+        
+      
+    
+    
+    
+    <category term="八股文" scheme="https://laipingping.github.io/categories/%E5%85%AB%E8%82%A1%E6%96%87/"/>
+    
+    
+    <category term="面试题" scheme="https://laipingping.github.io/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>uni-app的使用教程</title>
+    <link href="https://laipingping.github.io/2023/03/17/uni-app-de-shi-yong/"/>
+    <id>https://laipingping.github.io/2023/03/17/uni-app-de-shi-yong/</id>
+    <published>2023-03-17T15:05:51.000Z</published>
+    <updated>2023-04-01T13:02:31.100Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;基本使用&quot;&gt;&lt;a href=&quot;#基本使用&quot; class=&quot;headerlink&quot; title=&quot;基本使用&quot;&gt;&lt;/a&gt;基本使用&lt;/h2&gt;&lt;p&gt;官网： &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://laipingping.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="uni-app" scheme="https://laipingping.github.io/tags/uni-app/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于hexo搭建的个人博客</title>
+    <link href="https://laipingping.github.io/2023/03/16/ji-yu-hexo-da-jian-de-ge-ren-bo-ke/"/>
+    <id>https://laipingping.github.io/2023/03/16/ji-yu-hexo-da-jian-de-ge-ren-bo-ke/</id>
+    <published>2023-03-16T15:05:51.000Z</published>
+    <updated>2023-04-01T13:20:22.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;获得个人网站域名&quot;&gt;&lt;a href=&quot;#获得个人网站域名&quot; class=&quot;headerlink&quot; title=&quot;获得个人网站域名&quot;&gt;&lt;/a&gt;获得个人网站域名&lt;/h2&gt;&lt;p&gt;域名是上网单位和个人在网络上的重要标识，起着识别作用 ，便于他人识别和检索某一企业</summary>
+        
+      
+    
+    
+    
+    <category term="案例" scheme="https://laipingping.github.io/categories/%E6%A1%88%E4%BE%8B/"/>
+    
+    
+    <category term="hexo" scheme="https://laipingping.github.io/tags/hexo/"/>
+    
+    <category term="个人博客" scheme="https://laipingping.github.io/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+</feed>

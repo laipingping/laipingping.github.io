@@ -1,0 +1,1214 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="canvas太阳系旋转动画, 欢迎来到vesna的个人博客">
+    <meta name="description" content="canvas动画的简单运用">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>canvas太阳系旋转动画 | 欢迎来到vesna的个人博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="欢迎来到vesna的个人博客" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">欢迎来到vesna的个人博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">欢迎来到vesna的个人博客</div>
+        <div class="logo-desc">
+            
+            vesna的个人博客
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">canvas太阳系旋转动画</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/">
+                                <span class="chip bg-color">可视化</span>
+                            </a>
+                        
+                            <a href="/tags/canvas%E5%8A%A8%E7%94%BB/">
+                                <span class="chip bg-color">canvas动画</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%A1%88%E4%BE%8B/" class="post-category">
+                                案例
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-04-01
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="技术说明"><a href="#技术说明" class="headerlink" title="技术说明"></a>技术说明</h2><p>Canvas提供了非常多的JavaScript绘图API（比如：绘制路径、矩形、圆、文本和图像等方法），与元素可以绘制 各种2D图形。</p>
+<h3 id="绘制矩形-Rectangle"><a href="#绘制矩形-Rectangle" class="headerlink" title="绘制矩形( Rectangle )"></a>绘制矩形( Rectangle )</h3><p>◼ Canvas支持两种方式来绘制矩形：矩形方法 和 路径方法。 </p>
+<p> 路径是通过不同颜色和宽度的线段或曲线相连形成的不同形状的点的集合。 </p>
+<p> 除了矩形，其他的图形都是通过一条或者多条路径组合而成的。 </p>
+<p> 通常我们会通过众多的路径来绘制复杂的图形。 </p>
+<p>◼ Canvas 绘图的矩形方法： </p>
+<p> fillRect(x, y, width, height)： 绘制一个填充的矩形 </p>
+<p> strokeRect(x, y, width, height)： 绘制一个矩形的边框  clearRect(x, y, width, height)： 清除指定矩形区域，让清除部分完全透明。 </p>
+<p>◼ 方法参数： </p>
+<p> 上面的方法都包含了相同的参数。 </p>
+<p> x 与 y 指定了在canvas画布上所绘制矩形的左上角（相对于原点）的坐标（不支持 undefined ）。 </p>
+<p> width 和 height 设置矩形的尺寸。 绘制矩形( Rectangle ) coderwhy </p>
+<h3 id="路径"><a href="#路径" class="headerlink" title="路径"></a>路径</h3><p>◼ 什么是路径？ </p>
+<p> 图形的基本元素是路径。路径是通过不同颜色和宽度的线段或曲线相连形成的不同形状的点的集合。 </p>
+<p> 路径是可由很多子路径构成，这些子路径都是在一个列表中，列表中所有子路径（线、弧形等）将构成图形。 </p>
+<p> 一个路径，甚至一个子路径，通常都是闭合的。 </p>
+<p>◼ 使用路径绘制图形的步骤： </p>
+<p> 1.首先需要创建路径起始点（beginPath）。 </p>
+<p> 2.然后使用画图命令去画出路径( arc 、lineTo )。 </p>
+<p> 3.之后把路径闭合( closePath , 不是必须)。 </p>
+<p> 4.一旦路径生成，就能通过描边(stroke)或填充路径区域(fill)来渲染图形。 </p>
+<p>◼ 以下是绘制路径时，所要用到的函数 </p>
+<p> beginPath()：新建一条路径，生成之后，图形绘制命令被指向到新的路径上绘图，不会关联到旧的路径。 </p>
+<p> closePath()：闭合路径之后图形绘制命令又重新指向到 beginPath之前的上下文中。 </p>
+<p> stroke()：通过线条来绘制图形轮廓&#x2F;描边（针对当前路径图形）。 </p>
+<p> fill()：通过填充路径的内容区域生成实心的图形（针对当前路径图形）。 </p>
+<h3 id="路径-绘制直线"><a href="#路径-绘制直线" class="headerlink" title="路径-绘制直线"></a>路径-绘制直线</h3><p>◼ 移动画笔（moveTo）方法 </p>
+<p> moveTo 方法是不能画出任何东西，但是它也是路径列表的一部分 </p>
+<p> moveTo 可以想象为在纸上作业，一支钢笔或者铅笔的笔尖从一个点到另一个点的移动过程。 </p>
+<p> moveTo(x, y)： 将笔移动到指定的坐标 x 、 y 上。 </p>
+<p> 当 canvas 初始化或者beginPath()调用后，我们通常会使用moveTo(x, y)函数设置起点。 </p>
+<p> 使用moveTo函数能够绘制一些不连续的路径。 </p>
+<p>◼ 绘制直线（lineTo）方法 </p>
+<p> lineTo(x, y)： 绘制一条从当前位置到指定 (x ，y)位置的直线。 ✓ 该方法有两个参数(x ， y)代表坐标系中直线结束的点。 ✓ 开始点和之前的绘制路径有关，之前路径的结束点就是接下来的开始点。 ✓ 当然开始点也可以通过moveTo(x, y)函数改变。 </p>
+<p>◼ 绘制一条直线 </p>
+<p> 第一步：调用 beginPath() 来生成路径。本质上，路径是由很多子路径（线、弧形、等）构成。 </p>
+<p> 第二步：调用moveTo、lineTo函数来绘制路径（路径可以是连续也可以不连续）。 </p>
+<p> 第三步：闭合路径 closePath()，虽然不是必需的，但是通常都是要闭合路径。 </p>
+<p> 第四步：调用stroke()函数来给直线描边。</p>
+<h3 id="路径-绘制三角形-Triangle"><a href="#路径-绘制三角形-Triangle" class="headerlink" title="路径-绘制三角形( Triangle )"></a>路径-绘制三角形( Triangle )</h3><p>◼ 绘制一个三角形步骤 </p>
+<p> 第一步：调用 beginPath() 来生成路径。 </p>
+<p> 第二步：调用moveTo()、lineTo()函数来绘制路径。 </p>
+<p> 第三步：闭合路径 closePath()，不是必需的。 ✓ closePath() 方法会通过绘制一条从当前点到开始点的直线来闭合图形。 ✓ 如果图形是已经闭合了的，即当前点为开始点，该函数什么也不做。 </p>
+<p> 第四步：调用stroke()函数来给线描边，或者调用fill()函数来填充（使用填充 fill 时，路径会自动闭合，而 stroke 不会）。 </p>
+<h3 id="路径-绘制圆弧（Arc）、圆-Circle"><a href="#路径-绘制圆弧（Arc）、圆-Circle" class="headerlink" title="路径-绘制圆弧（Arc）、圆 ( Circle)"></a>路径-绘制圆弧（Arc）、圆 ( Circle)</h3><p>◼ 绘制圆弧或者圆，使用arc()方法。 </p>
+<p> arc(x, y, radius, startAngle, endAngle, anticlockwise)，该方法有六个参数： </p>
+<p>✓ x、y：为绘制圆弧所在圆上的圆心坐标。 </p>
+<p>✓ radius：为圆弧半径。 </p>
+<p>✓ startAngle、endAngle：该参数用弧度定义了开始以及结束的弧度。这些都是以 x 轴为基准。 </p>
+<p>✓ anticlockwise：为一个布尔值。为 true ，是逆时针方向，为false，是顺时针方向，默认为false。 </p>
+<p>◼ 计算弧度  arc() 函数中表示角的单位是弧度，不是角度。 </p>
+<p> 角度与弧度的 JS 表达式：弧度&#x3D;( Math.PI &#x2F; 180 ) * 角度 ，即 1角度&#x3D; Math.PI &#x2F; 180 个弧度 ✓ 比如：旋转90°：Math.PI &#x2F; 2； 旋转180°：Math.PI ； 旋转360°：Math.PI * 2； 旋转-90°：-Math.PI &#x2F; 2； </p>
+<p>◼ 绘制一个圆弧的步骤 </p>
+<p> 第一步：调用 beginPath() 来生成路径。 </p>
+<p> 第二步：调用arc()函数来绘制圆弧。 </p>
+<p> 第三步：闭合路径 closePath()，不是必需的。 </p>
+<p> 第四步：调用stroke()函数来描边，或者调用fill()函数来填充（使用填充 fill 时，路径会自动闭合）。 </p>
+<h3 id="路径-矩形（Rectangle）"><a href="#路径-矩形（Rectangle）" class="headerlink" title="路径-矩形（Rectangle）"></a>路径-矩形（Rectangle）</h3><p>◼ 绘制矩形的另一个方法： </p>
+<p> 调用rect() 函数绘制，即将一个矩形路径增加到当前路径上 </p>
+<p> rect(x, y, width, height) </p>
+<p>✓ 绘制一个左上角坐标为（x,y），宽高为 width 以及 height 的矩形。 </p>
+<p>◼ 注意： </p>
+<p> 当该方法执行的时候，moveTo(x, y) 方法自动设置坐标参数（0,0）。也就是说，当前笔触自动重置回默认坐标。 </p>
+<h3 id="色彩-Colors"><a href="#色彩-Colors" class="headerlink" title="色彩 Colors"></a>色彩 Colors</h3><p>◼ 前面已经学过了很多绘制图形的方法。如果我们想要给图形上色，有两个重要的属性可以做到： </p>
+<p> fillStyle &#x3D; color： 设置图形的填充颜色，需在 fill() 函数前调用。 </p>
+<p> strokeStyle &#x3D; color： 设置图形轮廓的颜色，需在 stroke() 函数前调用。 </p>
+<p>◼ color颜色 </p>
+<p> color 可以是表示 CSS 颜色值的字符串，支持：关键字、十六进制、rgb、rgba格式。 </p>
+<p> 默认情况下，线条和填充颜色都是黑色（CSS 颜色值 #000000）。 </p>
+<p>◼ 注意 </p>
+<p> 一旦设置了 strokeStyle 或者 fillStyle 的值，那么这个新值就会成为新绘制的图形的默认值。 </p>
+<p> 如果你要给图形上不同的颜色，你需要重新设置 fillStyle 或 strokeStyle 的值。 </p>
+<p>◼ 额外补充 </p>
+<p> fill() 函数是图形填充，fillStyle属性是设置填充色 </p>
+<p> stroke() 函数是图形描边，strokeStyle属性是设置描边色 </p>
+<h3 id="透明度-Transparent"><a href="#透明度-Transparent" class="headerlink" title="透明度 Transparent"></a>透明度 Transparent</h3><p>◼ 除了可以绘制实色图形，我们还可以用 canvas 来绘制半透明的图形。 </p>
+<p>◼ 方式一：strokeStyle 和 fillStyle属性结合RGBA： </p>
+<p>◼ 方式二：globalAlpha 属性  globalAlpha &#x3D; 0 ~ 1 ✓ 这个属性影响到 canvas 里所有图形的透明度 ✓ 有效的值范围是 0.0（完全透明）到 1.0（完全不透明），默认是 1.0。 </p>
+<h3 id="线型-Line-styles"><a href="#线型-Line-styles" class="headerlink" title="线型 Line styles"></a>线型 Line styles</h3><p>◼ 调用lineTo()函数绘制的线条，是可以通过一系列属性来设置线的样式。 </p>
+<p> lineWidth &#x3D; value： 设置线条宽度。 </p>
+<p> lineCap &#x3D; type： 设置线条末端样式。 </p>
+<p> lineJoin &#x3D; type： 设定线条与线条间接合处的样式。 </p>
+<p> ….. </p>
+<p>◼ lineWidth </p>
+<p> 设置线条宽度的属性值必须为正数。默认值是 1.0px，不需单位。（ 零、负数、Infinity和NaN值将被忽略） </p>
+<p> 线宽是指给定路径的中心到两边的粗细。换句话说就是在路径的两边各绘制线宽的一半。 </p>
+<p> 如果你想要绘制一条从 (3,1) 到 (3,5)，宽度是 1.0 的线条，你会得到像第二幅图一样的结果。 </p>
+<p>✓ 路径的两边个各延伸半个像素填充并渲染出1像素的线条（深蓝色部分） </p>
+<p>✓ 两边剩下的半个像素又会以实际画笔颜色一半色调来填充（浅蓝部分） </p>
+<p>✓ 实际画出线条的区域为（浅蓝和深蓝的部分），填充色大于1像素了，这就是为何宽度为 1.0 的线经常并不准确的原因。 </p>
+<p> 要解决这个问题，必须对路径精确的控制。如，1px的线条会在路径两边各延伸半像素，那么像第三幅图那样绘制从 (3.5 ,1) 到 (3.5, 5) 的线条，其边缘正好落在像素边界，填充出来就是准确的宽为 1.0 的线条。 </p>
+<h3 id="线型-Line-styles-1"><a href="#线型-Line-styles-1" class="headerlink" title="线型 Line styles"></a>线型 Line styles</h3><p>◼ lineCap： 属性的值决定了线段端点显示的样子。它可以为下面的三种的其中之一： </p>
+<p> butt 截断，默认是 butt。 </p>
+<p> round 圆形 </p>
+<p> square 正方形 </p>
+<p>◼ lineJoin： 属性的值决定了图形中线段连接处所显示的样子。它可以是这三种之一： </p>
+<p> round 圆形 </p>
+<p> bevel 斜角 </p>
+<p> miter 斜槽规，默认是 miter。 </p>
+<h3 id="绘制文本"><a href="#绘制文本" class="headerlink" title="绘制文本"></a>绘制文本</h3><p>◼ canvas 提供了两种方法来渲染文本： </p>
+<p> fillText(text, x, y [, maxWidth]) </p>
+<p>✓ 在 (x,y) 位置，填充指定的文本 </p>
+<p>✓ 绘制的最大宽度（可选）。 </p>
+<p> strokeText(text, x, y [, maxWidth]) </p>
+<p>✓ 在 (x,y) 位置，绘制文本边框 </p>
+<p>✓ 绘制的最大宽度（可选）。 </p>
+<p>◼ 文本的样式（需在绘制文本前调用） </p>
+<p> font &#x3D; value： 当前绘制文本的样式。这个字符串使用和 CSS font 属性相同的语法。默认的字体是：10px sans-serif。 </p>
+<p> textAlign &#x3D; value：文本对齐选项。可选的值包括：start, end, left, right or center. 默认值是 start </p>
+<p> textBaseline &#x3D; value：基线对齐选项。可选的值包括：top, hanging, middle, alphabetic, ideographic, bottom。 </p>
+<p>✓ 默认值是 alphabetic。 </p>
+<h3 id="绘制图片"><a href="#绘制图片" class="headerlink" title="绘制图片"></a>绘制图片</h3><p>◼ 绘制图片，可以使用 drawImage 方法将它渲染到 canvas 里。drawImage 方法有三种形态： </p>
+<p> drawImage(image, x, y) </p>
+<p>✓ 其中 image 是 image 或者 canvas 对象，x 和 y 是其在目标 canvas 里的起始坐标。 </p>
+<p> drawImage(image, x, y, width, height) </p>
+<p>✓ 这个方法多了 2 个参数：width 和 height，这两个参数用来控制 当向 canvas 画入时应该缩放的大小 </p>
+<p> drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight) </p>
+<p>✓ 第一个参数和其它的是相同的，都是一个图像或者另一个 canvas 的引用。其它 8 个参数最好是参照右边的图解，前 4 个 是定义图像源的切片位置和大小，后 4 个则是定义切片的目标显示位置和大小。 </p>
+<p>◼ 图片的来源，canvas 的 API 可以使用下面这些类型中的一种作为图片的源： </p>
+<p> HTMLImageElement：这些图片是由Image()函数构造出来的，或者任何的<code>&lt;img&gt;</code>元素。 </p>
+<p> HTMLVideoElement：用一个 HTML  的 <code>&lt;video&gt;</code>元素作为你的图片源，可以从视频中抓取当前帧作为一个图像。<br> HTMLCanvasElement：可以使用另一个 <code>&lt;canvas&gt;</code> 元素作为你的图片源。<br> ….</p>
+<h3 id="Canvas绘画状态-保存和恢复"><a href="#Canvas绘画状态-保存和恢复" class="headerlink" title="Canvas绘画状态-保存和恢复"></a>Canvas绘画状态-保存和恢复</h3><p>Canvas绘画状态-保存和恢复 coderwhy </p>
+<p>◼ Canvas绘画状态 </p>
+<p> 是当前绘画时所产生的样式和变形的一个快照。 </p>
+<p> Canvas在绘画时，会产生相应的绘画状态，其实我们是可以将某些绘画的状态存储在栈中来为以后复用。 </p>
+<p> Canvas 绘画状态的可以调用 save 和 restore 方法是用来保存和恢复，这两个方法都没有参数，并且它们是成对存在的。 </p>
+<p>◼ 保存和恢复（Canvas）绘画状态 </p>
+<p> save()：保存画布 (canvas) 的所有绘画状态 </p>
+<p> restore()：恢复画布 (canvas) 的所有绘画状态 </p>
+<p>◼ Canvas绘画状态包括： </p>
+<p> 当前应用的变形（即移动，旋转和缩放） </p>
+<p> 以及这些属性：strokeStyle, fillStyle, globalAlpha, lineWidth, lineCap, lineJoin, miterLimit, shadowOffsetX, shadowOffsetY, shadowBlur, shadowColor, font, textAlign, textBaseline …… </p>
+<p> 当前的裁切路径（clipping path） </p>
+<h3 id="变形-Transform"><a href="#变形-Transform" class="headerlink" title="变形 Transform"></a>变形 Transform</h3><p>◼ Canvas和CSS3一样也是支持变形，形变是一种更强大的方法，可以将坐标原点移动到另一点、形变可以对网格进行旋转和缩放。 </p>
+<p>◼ Canvas的形变有4种方法实现： </p>
+<p> translate(x, y)：用来移动 canvas 和它的原点到一个不同的位置。 </p>
+<p>✓ x 是左右偏移量，y 是上下偏移量（无需要单位），如右图所示。 </p>
+<p> rotate(angle)：用于以原点为中心旋转 canvas，即沿着z轴旋转。 </p>
+<p>✓ angle是旋转的弧度，是顺时针方向，以弧度为单位。 </p>
+<p> scale(x, y)：用来增减图形在 canvas 中像素数目，对图形进行缩小或放大。 </p>
+<p>✓ x 为水平缩放因子，y 为垂直缩放因子。如果比 1 小，会缩小图形，如果比 1 大会放大图形。默认值为 1，也支持负数。 </p>
+<p> transform(a, b, c, d, e, f)： 允许对变形矩阵直接修改。这个方法是将当前的变形矩阵乘上一个基于自身参数的矩阵。 </p>
+<p>◼ 注意事项： </p>
+<p> 在做变形之前先调用 save 方法保存状态是一个良好的习惯。 </p>
+<p> 大多数情况下，调用 restore 方法比手动恢复原先的状态要简单得多。 </p>
+<p> 如果在一个循环中做位移但没有保存和恢复canvas状态，很可能到最后会发现有些东西不见了，因为它很可能已超出canvas画布以外了。 </p>
+<p> 形变需要在绘制图形前调用。 </p>
+<h3 id="旋转-rotate"><a href="#旋转-rotate" class="headerlink" title="旋转-rotate"></a>旋转-rotate</h3><p>◼ translate方法，它用来移动 canvas 和它的原点到一个不同的位置。 </p>
+<p> translate(x, y) ✓ x 是左右偏移量，y 是上下偏移量（无需单位）。 </p>
+<p>◼ 移动 canvas 原点的好处 </p>
+<p> 如不使用 translate方法，那么所有矩形默认都将被绘制在相同的（0,0）坐标原点。 </p>
+<p> translate方法可让我们任意放置图形，而不需要手工一个个调整坐标值。 </p>
+<p>◼ 移动矩形案例 </p>
+<p> 第一步：先保存一下canvas当前的状态  第二步：在绘制图形前translate移动画布 </p>
+<p> 第三步：开始绘制图形，并填充颜色 移动-translate coderwhy </p>
+<p>◼ rotate方法，它用于以原点为中心旋转 canvas，即沿着 z轴 旋转。 </p>
+<p> rotate(angle) ✓ 只接受一个参数：旋转的角度 (angle)，它是顺时针方向，以弧度为单位的值。 ✓ 角度与弧度的 JS 表达式：弧度&#x3D;( Math.PI &#x2F; 180 ) * 角度 ，即 1角度 &#x3D; Math.PI&#x2F;180 个弧度。 </p>
+<p> 比如：旋转90°：Math.PI &#x2F; 2； 旋转180°：Math.PI ； 旋转360°：Math.PI * 2； 旋转-90°：-Math.PI &#x2F; 2； </p>
+<p> 旋转的中心点始终是 canvas 的原坐标点，如果要改变它，我们需要用到 translate方法。 </p>
+<p>◼ 旋转案例 </p>
+<p> 第一步：先保存一下Canvas当前的状态，并确定旋转原点 </p>
+<p> 第二步：在绘制图形前旋转画布（坐标系会跟着旋转了） </p>
+<p> 第三步：开始绘制图形，并填充颜色 </p>
+<h3 id="缩放-scale"><a href="#缩放-scale" class="headerlink" title="缩放-scale"></a>缩放-scale</h3><p>◼ scale方法可以缩放画布。可用它来增减图形在 canvas 中的像素数目，对图形进行缩小或者放大。 </p>
+<p> scale(x, y) </p>
+<pre><code> x 为水平缩放因子，y 为垂直缩放因子，也支持负数。 
+</code></pre>
+<p>​	如果比 1 小，会缩小图形，如果比 1 大会放大图形。默认值为 1。 </p>
+<p>◼ 注意事项 </p>
+<p> 画布初始情况下，是以左上角坐标为原点。如果参数为负实数，相当于以 x 或 y 轴作为对称轴镜像反转。  例如，使用translate(0, canvas.height); scale(1,-1); 以 y 轴作为对称轴镜像反转。 </p>
+<p> 默认情况下，canvas 的 1 个单位为 1 个像素。如果我们设置缩放因子是 0.5，1 个单位就变成对应 0.5 个像素，这样绘制出 来的形状就会是原先的一半。同理，设置为 2.0 时，1 个单位就对应变成了 2 像素，绘制的结果就是图形放大了 2 倍。 </p>
+<p>◼ 缩放案例实战 </p>
+<p> 第一步：先保存一下Canvas当前的状态，并确定缩放原点 </p>
+<p> 第二步：在绘制图形前缩放画布  第三步：开始绘制图形，并填充颜色 </p>
+<h3 id="Canvas动画"><a href="#Canvas动画" class="headerlink" title="Canvas动画"></a>Canvas动画</h3><p>◼ Canvas绘图都是通过JavaScript 去操控的，如要实现一些交互性动画是相当容易的。那Canvas是如何做一些基本动画的？ </p>
+<p> canvas可能最大的限制就是图像一旦绘制出来，它就是一直保持那样了。 </p>
+<p> 如需要执行动画，不得不对画布上所有图形进行一帧一帧的重绘（比如在1秒绘60帧就可绘出流畅的动画了）。 </p>
+<p> 为了实现动画，我们需要一些可以定时执行重绘的方法。然而在Canvas中有三种方法可以实现： 分别为 setInterval 、 setTimeout 和 requestAnimationFrame 三种方法来定期执行指定函数进行重绘。 </p>
+<p>◼ Canvas 画出一帧动画的基本步骤（如要画出流畅动画，1s 需绘60帧）： </p>
+<p> 第一步：用 clearRect 方法清空 canvas ，除非接下来要画的内容会完全充满 canvas（例如背景图），否则你需要清空所有。 </p>
+<p> 第二步：保存 canvas 状态，如果加了 canvas 状态的设置（样式，变形之类的），又想在每画一帧之时都是原始状态的话， 你需要先保存一下，后面再恢复原始状态。 </p>
+<p> 第三步：绘制动画图形（animated shapes） ，即绘制动画中的一帧。 </p>
+<p> 第四步：恢复 canvas 状态，如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。 </p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">vesna</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://laipingping.github.io/2023/04/01/canvas-tai-yang-xi-xuan-zhuan-dong-hua/">https://laipingping.github.io/2023/04/01/canvas-tai-yang-xi-xuan-zhuan-dong-hua/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">vesna</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/">
+                                    <span class="chip bg-color">可视化</span>
+                                </a>
+                            
+                                <a href="/tags/canvas%E5%8A%A8%E7%94%BB/">
+                                    <span class="chip bg-color">canvas动画</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/04/03/mian-shi-ti-zheng-li-js/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="面试题整理-js">
+                        
+                        <span class="card-title">面试题整理-js</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            八股文-js
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-03
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%85%AB%E8%82%A1%E6%96%87/" class="post-category">
+                                    八股文
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%85%AB%E8%82%A1%E6%96%87/">
+                        <span class="chip bg-color">八股文</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/04/01/chun-css3-shi-xian-3d-li-ti-webpack-logo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="纯css实现3D立体webpack Logo">
+                        
+                        <span class="card-title">纯css实现3D立体webpack Logo</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            css 3D动画的简单运用
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%A1%88%E4%BE%8B/" class="post-category">
+                                    案例
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/3D%E5%8A%A8%E7%94%BB/">
+                        <span class="chip bg-color">3D动画</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/">
+                        <span class="chip bg-color">可视化</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <a href="/about" target="_blank">vesna</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
